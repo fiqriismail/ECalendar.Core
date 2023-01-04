@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECalendar.Web.Api", "ECalen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECalendar.Wb.Api.Tests.Unit", "ECalendar.Wb.Api.Tests.Unit\ECalendar.Wb.Api.Tests.Unit.csproj", "{DCD5A58B-8416-4251-9789-F2B336F09B0B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECalendar.Web.Api.Tests.Acceptance", "ECalendar.Web.Api.Tests.Acceptance\ECalendar.Web.Api.Tests.Acceptance.csproj", "{4185F33B-B578-4769-87AE-A233345487DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{DCD5A58B-8416-4251-9789-F2B336F09B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCD5A58B-8416-4251-9789-F2B336F09B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCD5A58B-8416-4251-9789-F2B336F09B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4185F33B-B578-4769-87AE-A233345487DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4185F33B-B578-4769-87AE-A233345487DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4185F33B-B578-4769-87AE-A233345487DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4185F33B-B578-4769-87AE-A233345487DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
