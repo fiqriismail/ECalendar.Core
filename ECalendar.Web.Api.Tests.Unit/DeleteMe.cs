@@ -1,7 +1,7 @@
 using Xunit;
 using FluentAssertions;
 
-namespace ECalendar.Wb.Api.Tests.Unit;
+namespace ECalendar.Web.Api.Tests.Unit;
 
 public class DeleteMe
 {
