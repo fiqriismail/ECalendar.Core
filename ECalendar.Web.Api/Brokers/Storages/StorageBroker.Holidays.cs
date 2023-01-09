@@ -1,9 +1,10 @@
 using ECalendar.Web.Api.Models;
+using EFxceptions;
 using Microsoft.EntityFrameworkCore;
 
 namespace ECalendar.Web.Api.Brokers.Storages;
 
-public partial class StorageBroker : IStorageBroker
+public partial class StorageBroker : EFxceptionsContext, IStorageBroker
 {
     public DbSet<Holiday> Holidays { get; set; }
     

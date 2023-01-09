@@ -17,6 +17,6 @@ public partial class StorageBroker : EFxceptionsContext, IStorageBroker
     {
         var connectionString = 
             this.configuration.GetConnectionString("DefaultConnection");
-        optionsBuilder.UseSqlServer(connectionString);
+        optionsBuilder.UseSqlite(connectionString);
     }
 }

@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECalendar.Web.Api", "ECalendar.Web.Api\ECalendar.Web.Api.csproj", "{2B7E44B0-4A58-466D-A3E0-736690218716}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECalendar.Wb.Api.Tests.Unit", "ECalendar.Wb.Api.Tests.Unit\ECalendar.Wb.Api.Tests.Unit.csproj", "{DCD5A58B-8416-4251-9789-F2B336F09B0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECalendar.Web.Api.Tests.Unit", "ECalendar.Web.Api.Tests.Unit\ECalendar.Web.Api.Tests.Unit.csproj", "{DCD5A58B-8416-4251-9789-F2B336F09B0B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECalendar.Web.Api.Tests.Acceptance", "ECalendar.Web.Api.Tests.Acceptance\ECalendar.Web.Api.Tests.Acceptance.csproj", "{4185F33B-B578-4769-87AE-A233345487DC}"
 EndProject
