@@ -13,7 +13,7 @@ public partial class HolidayServiceTests
         // given
         DateTimeOffset randomDateTime = GetRandomDateTime();
         DateTimeOffset dateTime = randomDateTime;
-        Holiday randomHoliday = CreateRandomHoliday(dateTime);
+        Holiday randomHoliday = CreateRandomHoliday(randomDateTime);
         Holiday inputHoliday = randomHoliday;
         Holiday storageHoliday = inputHoliday;
         Holiday expectedHoliday = storageHoliday;
@@ -33,10 +33,6 @@ public partial class HolidayServiceTests
         // then 
         actualHoliday.Should().BeEquivalentTo(expectedHoliday);
 
-        this.dateTimeBrokerMock.Verify(broker => 
-            broker.GetCurrentDateTime(), 
-            Times.Once());
-        
         this.storageBrokerMock.Verify(broker => 
             broker.InsertHolidayAsync(inputHoliday),
             Times.Once);

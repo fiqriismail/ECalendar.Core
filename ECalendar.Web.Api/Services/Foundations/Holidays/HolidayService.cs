@@ -23,7 +23,7 @@ public class HolidayService : IHolidayService
 
     public async ValueTask<Holiday> CreateHolidayAsync(Holiday holiday)
     {
-        throw new NotImplementedException();
+        return await this.storageBroker.InsertHolidayAsync(holiday);
     }
 
     public IQueryable<Holiday> RetrieveAllHolidays()
