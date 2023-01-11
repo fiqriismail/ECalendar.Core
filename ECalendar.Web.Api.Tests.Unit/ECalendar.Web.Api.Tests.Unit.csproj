@@ -22,4 +22,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ECalendar.Web.Api\ECalendar.Web.Api.csproj" />
+    </ItemGroup>
+
 </Project>

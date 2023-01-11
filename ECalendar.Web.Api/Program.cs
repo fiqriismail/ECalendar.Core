@@ -1,6 +1,7 @@
 using ECalendar.Web.Api.Brokers.DateTimes;
 using ECalendar.Web.Api.Brokers.Logings;
 using ECalendar.Web.Api.Brokers.Storages;
+using ECalendar.Web.Api.Services.Foundations.Holidays;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,7 @@ builder.Services.AddDbContext<StorageBroker>();
 builder.Services.AddScoped<IStorageBroker, StorageBroker>();
 builder.Services.AddTransient<ILogingBroker, LogingBroker>();
 builder.Services.AddTransient<IDateTimeBroker, DateTimeBroker>();
+builder.Services.AddTransient<IHolidayService, HolidayService>();
 
 var app = builder.Build();
 
