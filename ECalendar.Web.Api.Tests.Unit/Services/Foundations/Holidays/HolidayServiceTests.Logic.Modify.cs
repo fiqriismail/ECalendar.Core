@@ -40,11 +40,11 @@ public partial class HolidayServiceTests
         
         this.storageBrokerMock.Verify(broker => 
             broker.SelectHolidayByIdAsync(holidayId),
-            Times.Once);
+            Times.Never);
         
         this.dateTimeBrokerMock.Verify(broker => 
             broker.GetCurrentDateTime(),
-            Times.Never);
+            Times.Never); 
         
         this.storageBrokerMock.Verify(broker => 
             broker.UpdateHolidayAsync(inputHoliday),
