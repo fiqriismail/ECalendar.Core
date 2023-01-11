@@ -33,7 +33,7 @@ public class HolidayService : IHolidayService
 
     public async ValueTask<Holiday> RetrieveHolidayByIdAsync(Guid holidayId)
     {
-        throw new NotImplementedException();
+        return await this.storageBroker.SelectHolidayByIdAsync(holidayId);
     }
 
     public async ValueTask<Holiday> ModifyHolidayAsync(Holiday holiday)
