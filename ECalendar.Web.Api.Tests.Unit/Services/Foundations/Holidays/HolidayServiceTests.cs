@@ -21,7 +21,7 @@ public partial class HolidayServiceTests
         this.dateTimeBrokerMock = new Mock<IDateTimeBroker>();
         this.loggingBrokerMock = new Mock<ILoggingBroker>();
 
-        this.holidayService = new HolidayService(
+        this.holidayService = new HolidayService (
             storageBroker: this.storageBrokerMock.Object,
             loggingBroker: this.loggingBrokerMock.Object,
             dateTimeBroker: this.dateTimeBrokerMock.Object);
