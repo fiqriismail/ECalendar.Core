@@ -9,5 +9,5 @@ public class Holiday
     public bool IsMercantile { get; set; }
     public bool IsBank { get; set; }
     public bool IsOther { get; set; }
-    public DateTime Day { get; set; }
+    public DateTimeOffset Day { get; set; }
 }
