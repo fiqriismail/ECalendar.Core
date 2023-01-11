@@ -10,13 +10,13 @@ public partial class StorageBroker : EFxceptionsContext, IStorageBroker
     public StorageBroker(IConfiguration configuration)
     {
         this.configuration = configuration;
-        this.Database.Migrate();
+        Database.Migrate();
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        var connectionString = 
-            this.configuration.GetConnectionString("DefaultConnection");
+        var connectionString =
+            configuration.GetConnectionString("DefaultConnection");
         optionsBuilder.UseSqlite(connectionString);
     }
 }

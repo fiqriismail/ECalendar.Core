@@ -1,5 +1,5 @@
 using ECalendar.Web.Api.Brokers.DateTimes;
-using ECalendar.Web.Api.Brokers.Logings;
+using ECalendar.Web.Api.Brokers.Loggings;
 using ECalendar.Web.Api.Brokers.Storages;
 using ECalendar.Web.Api.Models;
 
@@ -7,20 +7,20 @@ namespace ECalendar.Web.Api.Services.Foundations.Holidays;
 
 public class HolidayService : IHolidayService
 {
-    private readonly IStorageBroker storageBroker;
-    private readonly ILogingBroker loggingBroker;
     private readonly IDateTimeBroker dateTimeBroker;
+    private readonly ILoggingBroker loggingBroker;
+    private readonly IStorageBroker storageBroker;
 
     public HolidayService(
         IStorageBroker storageBroker,
-        ILogingBroker loggingBroker,
+        ILoggingBroker loggingBroker,
         IDateTimeBroker dateTimeBroker)
     {
         this.storageBroker = storageBroker;
         this.loggingBroker = loggingBroker;
         this.dateTimeBroker = dateTimeBroker;
     }
-    
+
     public async ValueTask<Holiday> CreateHolidayAsync(Holiday holiday)
     {
         throw new NotImplementedException();

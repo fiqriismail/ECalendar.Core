@@ -1,5 +1,4 @@
 using Xunit;
-using FluentAssertions;
 
 namespace ECalendar.Web.Api.Tests.Unit;
 

@@ -1,6 +1,6 @@
-namespace ECalendar.Web.Api.Brokers.Logings;
+namespace ECalendar.Web.Api.Brokers.Loggings;
 
-public interface ILogingBroker
+public interface ILoggingBroker
 {
     void LogInformation(string message);
     void LogTrace(string message);
