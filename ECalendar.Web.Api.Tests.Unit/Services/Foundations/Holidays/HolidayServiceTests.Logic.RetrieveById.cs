@@ -40,7 +40,6 @@ public partial class HolidayServiceTests
         this.dateTimeBrokerMock.VerifyNoOtherCalls();
         this.loggingBrokerMock.VerifyNoOtherCalls();
         this.storageBrokerMock.VerifyNoOtherCalls();
-
-
+        
     }
 }
