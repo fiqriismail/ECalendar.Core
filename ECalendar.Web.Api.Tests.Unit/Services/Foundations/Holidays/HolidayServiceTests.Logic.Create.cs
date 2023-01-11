@@ -32,6 +32,10 @@ public partial class HolidayServiceTests
 
         // then 
         actualHoliday.Should().BeEquivalentTo(expectedHoliday);
+        
+        this.dateTimeBrokerMock.Verify(broker => 
+                broker.GetCurrentDateTime(),
+                Times.Never);
 
         this.storageBrokerMock.Verify(broker => 
             broker.InsertHolidayAsync(inputHoliday),

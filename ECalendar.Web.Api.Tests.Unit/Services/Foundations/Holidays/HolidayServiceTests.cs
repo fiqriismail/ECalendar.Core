@@ -3,6 +3,7 @@ using ECalendar.Web.Api.Brokers.Loggings;
 using ECalendar.Web.Api.Brokers.Storages;
 using ECalendar.Web.Api.Models;
 using ECalendar.Web.Api.Services.Foundations.Holidays;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using Moq;
 using Tynamix.ObjectFiller;
 
@@ -27,14 +28,19 @@ public partial class HolidayServiceTests
             dateTimeBroker: this.dateTimeBrokerMock.Object);
     }
 
+    private static int GetRandomNumber() => new IntRange(min: 2, max: 10).GetValue();
+    
+    private static DateTimeOffset GetRandomDateTime() =>
+        new DateTimeRange(earliestDate: new DateTime()).GetValue();
     private static Holiday CreateRandomHoliday() =>
         CreateHolidayFiller(dates: DateTimeOffset.UtcNow).Create();
     
     private static Holiday CreateRandomHoliday(DateTimeOffset dates) =>
         CreateHolidayFiller(dates: dates).Create();
+
+    private static IQueryable<Holiday> CreateRandomHolidays(DateTimeOffset dates) =>
+        CreateHolidayFiller(dates).Create(GetRandomNumber()).AsQueryable();
     
-    private static DateTimeOffset GetRandomDateTime() =>
-        new DateTimeRange(earliestDate: new DateTime()).GetValue();
 
     private static Filler<Holiday> CreateHolidayFiller(DateTimeOffset dates)
     {
