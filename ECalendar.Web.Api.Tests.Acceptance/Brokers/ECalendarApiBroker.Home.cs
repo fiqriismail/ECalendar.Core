@@ -4,6 +4,8 @@ public partial class ECalendarApiBroker
 {
     private const string homeRelativeUrl = "api/home";
 
-    public async ValueTask<string> GetHomeMessageAsync() =>
-        await this.apiFactoryClient.GetContentStringAsync(homeRelativeUrl);
+    public async ValueTask<string> GetHomeMessageAsync()
+    {
+        return await apiFactoryClient.GetContentStringAsync(homeRelativeUrl);
+    }
 }

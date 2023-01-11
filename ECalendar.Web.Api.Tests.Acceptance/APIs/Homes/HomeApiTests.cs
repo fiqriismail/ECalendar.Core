@@ -18,13 +18,13 @@ public class HomeApiTests
     public async Task ShouldReturnHomeMessageAsync()
     {
         // given
-        const string expectedMessage = 
+        const string expectedMessage =
             "The stuff you are looking for is not here!";
-        
+
         // when
         var actualMessage =
-            await this.eCalendarApiBroker.GetHomeMessageAsync();
-        
+            await eCalendarApiBroker.GetHomeMessageAsync();
+
         // then 
         actualMessage.Should().BeEquivalentTo(expectedMessage);
     }
