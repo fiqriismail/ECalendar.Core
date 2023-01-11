@@ -6,7 +6,7 @@ public interface IHolidayService
 {
     ValueTask<Holiday> CreateHolidayAsync(Holiday holiday);
     IQueryable<Holiday> RetrieveAllHolidays();
-    ValueTask<Holiday> RetrieveHolidayById(Guid holidayId);
+    ValueTask<Holiday> RetrieveHolidayByIdAsync(Guid holidayId);
     ValueTask<Holiday> ModifyHolidayAsync(Holiday holiday);
     ValueTask<Holiday> RemoveHolidayByIdAsync(Guid holidayId);
 }
