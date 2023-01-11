@@ -28,7 +28,7 @@ public class HolidayService : IHolidayService
 
     public IQueryable<Holiday> RetrieveAllHolidays()
     {
-        throw new NotImplementedException();
+        return this.storageBroker.SelectAllHolidays();
     }
 
     public async ValueTask<Holiday> RetrieveHolidayByIdAsync(Guid holidayId)
