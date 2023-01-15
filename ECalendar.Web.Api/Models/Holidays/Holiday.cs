@@ -1,4 +1,4 @@
-namespace ECalendar.Web.Api.Models;
+namespace ECalendar.Web.Api.Models.Holidays;
 
 public class Holiday
 {

@@ -1,4 +1,4 @@
-using ECalendar.Web.Api.Models;
+using ECalendar.Web.Api.Models.Holidays;
 
 namespace ECalendar.Web.Api.Brokers.Storages;
 

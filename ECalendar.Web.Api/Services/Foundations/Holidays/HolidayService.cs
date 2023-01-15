@@ -1,11 +1,11 @@
 using ECalendar.Web.Api.Brokers.DateTimes;
 using ECalendar.Web.Api.Brokers.Loggings;
 using ECalendar.Web.Api.Brokers.Storages;
-using ECalendar.Web.Api.Models;
+using ECalendar.Web.Api.Models.Holidays;
 
 namespace ECalendar.Web.Api.Services.Foundations.Holidays;
 
-public class HolidayService : IHolidayService
+public partial class HolidayService : IHolidayService
 {
     private readonly IDateTimeBroker dateTimeBroker;
     private readonly ILoggingBroker loggingBroker;
