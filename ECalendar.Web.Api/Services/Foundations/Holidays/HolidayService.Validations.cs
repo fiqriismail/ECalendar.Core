@@ -7,7 +7,7 @@ public partial class HolidayService
 {
     private void ValidateHolidayOnCreate(Holiday holiday)
     {
-        
+        ValidateHoliday(holiday);
     }
 
     private static void ValidateHoliday(Holiday holiday)

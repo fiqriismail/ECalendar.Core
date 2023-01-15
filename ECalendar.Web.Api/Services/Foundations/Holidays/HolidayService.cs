@@ -21,9 +21,14 @@ public partial class HolidayService : IHolidayService
         this.dateTimeBroker = dateTimeBroker;
     }
 
-    public async ValueTask<Holiday> CreateHolidayAsync(Holiday holiday)
+    public ValueTask<Holiday> CreateHolidayAsync(Holiday holiday)
     {
-        return await this.storageBroker.InsertHolidayAsync(holiday);
+        return TryCatch(async () =>
+        {
+            ValidateHolidayOnCreate(holiday);
+
+            return await this.storageBroker.InsertHolidayAsync(holiday);
+        });
     }
 
     public IQueryable<Holiday> RetrieveAllHolidays()
